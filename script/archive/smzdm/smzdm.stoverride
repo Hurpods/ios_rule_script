@@ -1,0 +1,29 @@
+name: |-
+  什么值得买
+desc: |-
+  什么值得买每日签到、抽奖与任务
+author: |-
+  blackmatrix7
+icon: |-
+  https://raw.githubusercontent.com/Hurpods/ios_rule_script/master/script/archive/smzdm/smzdm.png
+openUrl: |-
+  https://github.com/Hurpods/ios_rule_script
+homepage: |-
+  https://github.com/Hurpods/ios_rule_script
+
+http:
+  mitm:
+    - "user-api.smzdm.com"
+  script:
+    - match: ^https?:\/\/user-api\.smzdm\.com\/checkin$
+      name: "什么值得买_获取Cookie_7"
+      type: request
+cron:
+  script:
+    - name: "什么值得买_获取Cookie_7"
+      cron: "5 10 * * *"
+      timeout: 300
+script-providers:
+  "什么值得买_获取Cookie_7":
+    url: https://raw.githubusercontent.com/Hurpods/ios_rule_script/master/script/archive/smzdm/smzdm_daily.js
+    interval: 86400
