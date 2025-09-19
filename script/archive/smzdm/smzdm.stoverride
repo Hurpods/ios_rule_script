@@ -4,6 +4,8 @@ desc: |-
   什么值得买每日签到、抽奖与任务
 author: |-
   blackmatrix7
+category: |-
+  CronScript
 icon: |-
   https://raw.githubusercontent.com/Hurpods/ios_rule_script/master/script/archive/smzdm/smzdm.png
 openUrl: |-
@@ -21,7 +23,7 @@ http:
 cron:
   script:
     - name: "什么值得买_获取Cookie_7"
-      cron: "5 10 * * *"
+      cron: "2 0 * * *"
       timeout: 300
 script-providers:
   "什么值得买_获取Cookie_7":
